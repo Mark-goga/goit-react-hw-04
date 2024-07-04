@@ -1,0 +1,19 @@
+.list {
+  max-width: 1300px;
+  margin: 30px auto 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 15px;
+}
+.item {
+  width: 300px;
+  height: 300px;
+  transition-property: transform;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+.item:hover {
+  transform: scale(110%);
+}
