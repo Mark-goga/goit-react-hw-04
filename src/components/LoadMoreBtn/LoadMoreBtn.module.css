@@ -1,0 +1,13 @@
+.loadMore {
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  background-color: #4b75ff;
+  border-radius: 5px;
+}
