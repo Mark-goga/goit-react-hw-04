@@ -1,9 +1,18 @@
+import toast, { Toaster } from "react-hot-toast";
 import css from "./SearchBar.module.css";
 
 export default function SearchBar({ onSearch }) {
+  const notify = () => toast.error("the field must be filled");
+
   function handleSubmit(evn) {
+    evn.preventDefault();
     const formEl = evn.currentTarget;
-    evn.preventDefault(); 
+
+    if (formEl.elements.topic.value.trim() === "") {
+      notify();
+      return;
+    }
+
     onSearch(formEl.elements.topic.value.trim());
     formEl.reset();
   }
@@ -21,6 +30,7 @@ export default function SearchBar({ onSearch }) {
         />
         <button type="submit">Search</button>
       </form>
+      <Toaster /> {/* Додайте компонент Toaster тут */}
     </header>
   );
 }

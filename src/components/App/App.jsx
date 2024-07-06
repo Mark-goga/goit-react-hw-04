@@ -3,7 +3,7 @@ import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import { fetchImage } from "../../feach-api";
 import { useEffect, useState } from "react";
 import ImageGallery from "../ImageGallery/ImageGallery";
-import ErrorMesage from '../ErrorMesage/ErrorMesage'
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 import ImageModal from "../ImageModal/ImageModal";
 
@@ -61,8 +61,12 @@ export default function App() {
       <ImageGallery images={images} onClickImage={handleClickImg} />
       {images.length > 0 && !loader && <LoadMoreBtn onLoadMore={handleClick} />}
       {loader && <Loader />}
-      { error && <ErrorMesage />}
-      <ImageModal closeModal={closeModal} modalIsOpen={modalIsOpen} imgUrl={bigImage} />
+      {error && <ErrorMessage />}
+      <ImageModal
+        closeModal={closeModal}
+        modalIsOpen={modalIsOpen}
+        imgUrl={bigImage}
+      />
     </div>
   );
 }

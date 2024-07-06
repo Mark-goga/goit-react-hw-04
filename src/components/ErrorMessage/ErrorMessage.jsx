@@ -1,8 +1,8 @@
-import css from './ErrorMesage.module.css'
-export default function ErrorMesage() {
+import css from './ErrorMessage.css'
+export default function ErrorMessage() {
   return (
     <div>
       <p className={css.text}>Pleas reload this page</p>
     </div>
-  )
+  );
 }

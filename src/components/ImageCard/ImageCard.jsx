@@ -4,8 +4,13 @@ export default function ImageCard({ image: { alt_description, urls }, onClickIma
     onClickImage(urls.full);
   }
   return (
-    <div className={css.box} onClick={handleClick}>
-      <img className={css.image} src={urls.small} alt={alt_description} />
+    <div className={css.box}>
+      <img
+        className={css.image}
+        src={urls.small}
+        alt={alt_description}
+        onClick={handleClick}
+      />
     </div>
   );
 }
