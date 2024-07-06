@@ -10,4 +10,10 @@
   border: none;
   background-color: #4b75ff;
   border-radius: 5px;
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+.loadMore:hover {
+  background-color: #6a8af2;
 }
